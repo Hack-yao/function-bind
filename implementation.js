@@ -43,7 +43,7 @@ module.exports = function bind(that) {
 //     bound = function ($1,$2, ...) {
 //         return binder.apply(this, arguments);
 //     }
-
+    // Function.prototype doesn't have a prototype property
     if (target.prototype) {
         var Empty = function Empty() {};
         Empty.prototype = target.prototype;
